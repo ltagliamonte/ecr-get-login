@@ -13,5 +13,5 @@ cd build
 for OSARCH in $(ls); do
 	cd "$OSARCH"
 	tar -czf "$ROOT/dist/${NAME}_${RELEASE}_${OSARCH}.tar.gz" .
-	cd -
+	cd - > /dev/null
 done
