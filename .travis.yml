@@ -1,0 +1,21 @@
+language: go
+go:
+- '1.8'
+before_install:
+- go get github.com/mitchellh/gox
+install:
+- true
+script:
+- go test -v
+after_success:
+- "./build.sh"
+deploy:
+  provider: releases
+  api_key:
+    secure: sSZDyUA1azCAaAyhqJNTKaGvI69+EHiL9mDxegwZwUxMNrCIPxMWSjW3uL3IlO/DmTqTcpvRHfA7EbWSqS7II1ilsfdbKWbZtN3S87uzX/POa5YqZnDMQG2xCspLbTfYk/xF+jZjErLEBp5IM65eITOc1NT3pnQPysWCcHZDw2J3hVi/LUSq0qf9yOuMZGaFklThnRBxM/WNtxjEJSWhY21K4OFo7uB6Wixohu+819qavKl1+uOzci2bKgROHPOKybTFy7BK+sGCjwj5sJuo8zYf+4nLjqxRDIzkHNYeFbdQR+hgqSr+s6JIa/EDGdbSppIA0mBa8ToufdUlWlfnvIBvODBkUFg8pqBC5v8y7qWAm++QI35LUz+uI77wYP4PJ4i4AmbFK4Iq+IT2fcFOv1Sc8I+169OZPYmK5yaFS51k1pag8hrhzTKMZBZeDlnNq8wfnBwi2WWAfFoJRrN/nOdZ3SKqrBOzrJsl2qo29ipUH7ae7Gnzx2xHiB+F/iXEEMb5BMbW9Xb86bxMSzBI3CuJsHi+MCQ5Lrkg7/NiCTqbK3Ty/kKeVg4QKDxGX5nxo6joAovAdzNSBx64QSsmx0SBySRfJy2Lyzn22rAe7uTZhIY4IIxel+QVpj0Jkt+HUZViwXs5gDH57fxXXBm6fr8U63AB4LGD6YzJxyVjeFM=
+  skip_cleanup: true
+  file_glob: true
+  file: dist/*
+  on:
+    tags: true
+    repo: zenreach/ecr-get-login
