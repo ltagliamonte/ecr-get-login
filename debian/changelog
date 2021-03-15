@@ -1,0 +1,5 @@
+ecr-get-login (1.0.0-1) deployed; urgency=medium
+
+  * Initial release.
+
+ -- Carl Allendorph <carl@advanced.farm>  Mon, 15 Mar 2021 09:34:25 -0700

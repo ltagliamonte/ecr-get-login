@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ecr-get-login
+Upstream-Contact: Luigi Tagliamonte <luigi@advanced.farm>
+Source: https://github.com/ltagliamonte/ecr-get-login
+
+Files: *
+Copyright: 2021 Luigi Tagliamonte
+License: BSD 3-Clause License

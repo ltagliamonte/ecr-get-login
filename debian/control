@@ -1,0 +1,16 @@
+Source: ecr-get-login
+Section: unknown
+Priority: important
+Build-Depends: golang
+Maintainer: Carl Allendorph <carl@advanced.farm>
+Standards-Version: 4.0.0
+Homepage: https://github.com/ltagliamonte/ecr-get-login
+
+Package: ecr-get-login
+Priority: important
+Architecture: amd64
+Depends:${misc:Depends}
+Description: Elastric Container Registry Login Helper
+  This package contains a utility to help logging into
+  AWS ECR so that docker can push/pull images using
+  the user's AWS credentials.
