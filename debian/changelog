@@ -1,3 +1,9 @@
+ecr-get-login (1.0.0-2) deployed; urgency=medium
+
+  * Updated to latest version of AWS library
+
+ -- Carl Allendorph <carl@advanced.farm>  Tue, 30 Mar 2021 07:53:45 -0700
+
 ecr-get-login (1.0.0-1) deployed; urgency=medium
 
   * Initial release.
